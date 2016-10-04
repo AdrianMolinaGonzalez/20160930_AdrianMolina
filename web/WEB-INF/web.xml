@@ -22,6 +22,14 @@
         <servlet-name>Cabeceras</servlet-name>
         <servlet-class>es.albarregas.servlets.Cabeceras</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>formulario</servlet-name>
+        <servlet-class>es.albarregas.servlets.formulario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>formularioCompleto</servlet-name>
+        <servlet-class>es.albarregas.servlets.formularioCompleto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HolaMundo</servlet-name>
         <url-pattern>/HolaMundo</url-pattern>
@@ -37,5 +45,13 @@
     <servlet-mapping>
         <servlet-name>Cabeceras</servlet-name>
         <url-pattern>/Cabeceras</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>formulario</servlet-name>
+        <url-pattern>/formulario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>formularioCompleto</servlet-name>
+        <url-pattern>/formularioCompleto</url-pattern>
     </servlet-mapping>
 </web-app>

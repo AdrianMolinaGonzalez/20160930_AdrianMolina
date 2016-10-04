@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Formulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="../css/formulario.css" > 
+    </head>
+    <body>
+        <form action="../formulario" method="post">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <br/>
+                <label for="nombre">Nombre:</label>&nbsp;&nbsp; 
+                <input type="text" id="nombre" name="nombre" value="" />
+                <br/><br/>
+                <label for="apellidos">Apellidos:</label> 
+                <input type="text" id="apellidos" name="apellidos" value="" />
+                <br/><br/>
+                <label for="marcar">Casilla para marcar</label> 
+                <input name="marcar" type="checkbox" value="si" />
+                <br/><br/>
+                <input  type="submit" value="Enviar" class="enviar" />
+            </fieldset>
+        </form>
+    </body>
+</html>
+

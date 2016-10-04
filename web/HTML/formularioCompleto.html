@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/formulario.css" > 
+    </head>
+    <body>
+               
+            <h1>Formulario Completo</h1>
+        <form action="../formularioCompleto" method="post">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <br/>
+                <label for="usuario">Usuario:</label>&nbsp;&nbsp; 
+                <input type="text" id="usuario" name="usuario" value="" />
+                <br/><br/>
+                <label for="contraseña">Password:</label> 
+                <input type="password" name="clave" >
+                <br/><br/>
+                <label for="edad">Edad:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" name="edad" value="22">
+                <br/><br/>
+           </fieldset>
+              <br/><br/>
+           <fieldset>
+                <legend>Otros Datos</legend>
+                <br/>
+                <label for="estado">Estado Civil:</label>&nbsp;&nbsp; 
+                <input type="radio" name="estado" value="Soltero" checked>Soltero/a
+                <input type="radio" name="estado" value="Casado" >Casado/a
+                <input type="radio" name="estado" value="Viudo">Viudo/a
+                <input type="radio" name="estado" value="Divorciado">Divorciado/a
+                <br/><br/>
+                <label for="aficiones">Aficiones (uno o varios CTRL)</label><br/> 
+                <select  style="overflow:hidden" id="aficiones" name="aficiones" size="6" multiple="multiple">
+                    <option value="deporte">Deporte</option>
+                    <option value="musica">Música</option>
+                    <option value="informatica">Informática</option>
+                    <option value="viajes">Viajes</option>
+                    <option value="tiendas">Tiendas</option>
+                    <option value="juegos">Juegos</option>
+                </select>
+                <br/><br/>
+                <label for="comentario">Comentarios:</label><br/>
+                <textarea name="comentario" rows="2" cols="25">Pon tu comentario...</textarea>
+                <br/><br/>
+           </fieldset>
+              <br/><br/>
+           <fieldset>
+                <legend>Medios Tecnológicos</legend>
+                <br/>
+                <label for="internet">Dispones de Internet?:</label>&nbsp;&nbsp; 
+                <input type="radio" name="internet" value="si"  checked>Si
+                <input type="radio" name="internet" value="no">No<br/><br/>
+                <label for="aficiones">Sistema Operativo(elige uno)</label><br/> 
+                <select style="overflow:hidden" id="sistema" name="sistema" size="4" >
+                    <option value="linux">Linux</option>
+                    <option value="windows" selected="selected">Windows</option>
+                    <option value="macintosh">Macintosh</option>
+                    <option value="solaris">Solaris</option>
+                </select>
+                <br/><br/>
+           </fieldset>
+   
+              <br/><br/>
+           &nbsp;<input  type="submit" value="Enviar" class="boton" />&nbsp;&nbsp;&nbsp;&nbsp;
+                 <input  type="reset" value="Limpiar" class="boton" />
+             </form>
+    </body>
+</html>
