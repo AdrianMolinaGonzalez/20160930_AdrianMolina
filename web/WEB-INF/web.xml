@@ -30,6 +30,10 @@
         <servlet-name>formularioCompleto</servlet-name>
         <servlet-class>es.albarregas.servlets.formularioCompleto</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>registro</servlet-name>
+        <servlet-class>es.albarregas.servlets.registro</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HolaMundo</servlet-name>
         <url-pattern>/HolaMundo</url-pattern>
@@ -53,5 +57,9 @@
     <servlet-mapping>
         <servlet-name>formularioCompleto</servlet-name>
         <url-pattern>/formularioCompleto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>registro</servlet-name>
+        <url-pattern>/registro</url-pattern>
     </servlet-mapping>
 </web-app>
