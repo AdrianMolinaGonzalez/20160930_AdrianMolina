@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilosweb.css" > 
+    </head>
+    <body>
+    <form name="saludo" action="../Saludo.jsp" method="post">
+            <fieldset>
+                <h3>Informacion personal</h3>
+                <br/>
+                <label for="nombre">Nombre:</label>&nbsp;&nbsp; 
+                <input type="text" name="nombre" value="" />
+                <br/><br/>
+                <label for="sexo">Sexo:</label>&nbsp;&nbsp; 
+                <input type="radio" name="sexo" value="hombre" checked>Hombre
+                <input type="radio" name="sexo" value="mujer" >Mujer
+                <br/><br/>
+           </fieldset>
+              <br/><br/>
+           &nbsp;<input  type="submit" value="Enviar" class="boton" />&nbsp;&nbsp;&nbsp;&nbsp;
+                 <input  type="reset" value="Limpiar" class="boton" />
+        </form>
+    </body>
+</html>

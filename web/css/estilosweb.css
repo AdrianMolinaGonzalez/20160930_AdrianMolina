@@ -94,3 +94,15 @@ h4{
     font: bold  monospace;
     color:red;
 }
+#servlet
+{
+    width: 45%;
+    display: inline-block;
+}
+
+#jsp
+{
+    width: 33%;
+    display: inline-block;
+    vertical-align: top
+}

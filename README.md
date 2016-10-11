@@ -1,3 +1,2 @@
 
- Actualizado el proyecto con el formulario y el formularioCompleto.
- Añadida opcion de registro
+ Actualizado el proyecto con el .war, calculadora y Saludo jsp
