@@ -34,6 +34,14 @@
         <servlet-name>registro</servlet-name>
         <servlet-class>es.albarregas.servlets.registro</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ContadorVisitasCookie</servlet-name>
+        <servlet-class>es.albarregas.servlets.ContadorVisitasCookie</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ContadorVisitasSesion</servlet-name>
+        <servlet-class>es.albarregas.servlets.ContadorVisitasSesion</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HolaMundo</servlet-name>
         <url-pattern>/HolaMundo</url-pattern>
@@ -61,5 +69,13 @@
     <servlet-mapping>
         <servlet-name>registro</servlet-name>
         <url-pattern>/registro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ContadorVisitasCookie</servlet-name>
+        <url-pattern>/ContadorVisitasCookie</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ContadorVisitasSesion</servlet-name>
+        <url-pattern>/ContadorVisitasSesion</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -16,60 +16,7 @@
     <body>
      <h2>Calculadora</h2>
         
- 
-        <%
-         
-            
-          try {  
-            if(request.getParameter("calcular")!=null)
-            {
-               
-                
-                int num1=Integer.parseInt(request.getParameter("param1"));
-                int num2=Integer.parseInt(request.getParameter("param2"));
-                int total=0;
-                
-                   switch(request.getParameter("operacion"))
-                   {
-                       case "suma":
-                           total=num1-num2;
-                           %>
-                           <p>Total: <%= total %></p>
-                           <%
-                           break;
-                       case "resta":
-                           total=num1-num2;
-                           %>
-                           <p>Total: <%= total %></p>
-                           <%
-                           break;
-                       case "multiplicacion":
-                           total=num1*num2;
-                           %>
-                           <p>Total: <%= total %></p>
-                           <%
-                           break;
-                        case "division":
-                            total=num1/num2;
-                            %>
-                           <p>Total: <%= total %></p>
-                           <%
-                           break;
-                   }
-                   %>
-        
-        <% 
-                  
-            }
-            } catch(NumberFormatException ex){
-            %>
-                Alguno de los números no contenía dígitos válidos...<BR><BR>
-            <%
-            }
-         
-            %>
-            
-            <%! public String fechaActual() {
+ <%! public String fechaActual() {
                         Calendar fecha = Calendar.getInstance();
                         String dia = Integer.toString(fecha.get(Calendar.DAY_OF_MONTH));
                         String mes = Integer.toString(fecha.get(Calendar.MONTH));
@@ -77,9 +24,68 @@
                         return "Dia " + dia + " del " + mes + " de " + anyo;
                     }
             %>
-            <%= fechaActual() %><br/><br/>
-           
+        <%
+         
             
+           
+            if(request.getParameter("calcular")!=null)
+            {
+               
+              try {
+                  
+                  
+                int num1=Integer.parseInt(request.getParameter("param1"));
+                int num2=Integer.parseInt(request.getParameter("param2"));
+                int total=0;
+                boolean error=false;
+                String operador=null;
+                
+                   switch(request.getParameter("operacion"))
+                   {
+                       case "suma":
+                           total=num1+num2;
+                           operador="+";
+                         
+                           break;
+                       case "resta":
+                           total=num1-num2;
+                           operador="-";
+                           
+                           break;
+                       case "multiplicacion":
+                           total=num1*num2;
+                           operador="*";
+                          
+                           break;
+                        case "division":
+                        if(num2==0){
+				%>
+ 				<p>El divisor es 0. </p>
+ 				<%
+				error = true;
+                                } else {
+                            total=num1/num2;
+                            operador="/";
+                            }
+                           
+                   }
+                    if(!error){
+			%>
+                        <p><%= fechaActual() %></p><br/><br/>
+			<p><%=request.getHeader("user-agent") %></p>
+                         <h2>El resultado de <%=num1 %> <%=operador %> <%=num2 %> = <%=total %></h2>
+		 <%
+		}
+  
+            } catch(NumberFormatException e){
+            %>
+                Alguno de los números no contenía dígitos válidos...<BR><BR>
+         <%   
+       }      
+            
+          
+            }
+     %>       
             <form action="Calculadora.jsp" method="POST">
             Introduce el primer número:
             <input type="text" name="param1" value=""/><br/>
