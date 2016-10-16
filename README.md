@@ -1,2 +1,2 @@
 
- Actualizado el proyecto con el .war, calculadora y Saludo jsp
+ Actualizado el proyecto con el .war, Contador de visitas cookie y sesion
